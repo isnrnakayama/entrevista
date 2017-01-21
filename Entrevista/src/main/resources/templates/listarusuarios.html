@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Listagem de Usuários</title>
+</head>
+<body>
+
+	<section>
+		<div id="listaDeUsuarios">
+			<table>
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>CPF</th>
+						<th>Endereço</th>
+						<th>Telefone</th>
+					</tr>
+				</thead>
+				<tr th:each="usuario : ${usuarios}">
+					<td><span th:text="${usuario.nome}"></span></td>
+					<td><span th:text="${usuario.cpf}"></span></td>
+					<td><span th:text="${usuario.endereco}"></span></td>
+					<td><span th:text="${usuario.telefone}"></span></td>
+				</tr>
+
+			</table>
+		</div>
+	</section>
+
+</body>
+</html>
